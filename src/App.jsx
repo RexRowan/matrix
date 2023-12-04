@@ -3,11 +3,6 @@ import './App.css';
 import PropTypes from 'prop-types';
 
 const TerminalModal = ({ isOpen, handleClose }) => {
-  TerminalModal.propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func.isRequired,
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -25,6 +20,12 @@ const TerminalModal = ({ isOpen, handleClose }) => {
   );
 };
 
+// Define propTypes outside of the component
+TerminalModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+};
+
 const TerminalIcon = ({ handleOpen }) => {
   return (
     <div className="terminal-icon" onClick={handleOpen}>
@@ -33,6 +34,7 @@ const TerminalIcon = ({ handleOpen }) => {
   );
 };
 
+// Define propTypes outside of the component
 TerminalIcon.propTypes = {
   handleOpen: PropTypes.func.isRequired,
 };
@@ -52,4 +54,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage
+export default HomePage;
