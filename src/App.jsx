@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import './assets/kali.png';
 import './App.css';
 import PropTypes from 'prop-types';
+
+function App() {
 
 const TerminalModal = ({ isOpen, handleClose }) => {
   if (!isOpen) return null;
@@ -29,7 +32,7 @@ TerminalModal.propTypes = {
 const TerminalIcon = ({ handleOpen }) => {
   return (
     <div className="terminal-icon" onClick={handleOpen}>
-      <img src="/src/assets/kali.png" alt="Terminal Icon" />
+      <img src="./src/assets/kali.png" alt="Terminal Icon" />
     </div>
   );
 };
@@ -53,5 +56,7 @@ const HomePage = () => {
     </div>
   );
 };
+return <HomePage/>;
+}
 
-export default HomePage;
+export default App;
