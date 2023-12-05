@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import './assets/kali.png';
+import kaliImage from './assets/kali.png'; // Corrected import statement
 import './App.css';
 import PropTypes from 'prop-types';
-
-function App() {
 
 const TerminalModal = ({ isOpen, handleClose }) => {
   if (!isOpen) return null;
@@ -23,7 +21,7 @@ const TerminalModal = ({ isOpen, handleClose }) => {
   );
 };
 
-// Define propTypes outside of the component
+// Correctly defined propTypes outside of the component
 TerminalModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
@@ -32,17 +30,17 @@ TerminalModal.propTypes = {
 const TerminalIcon = ({ handleOpen }) => {
   return (
     <div className="terminal-icon" onClick={handleOpen}>
-      <img src="./src/assets/kali.png" alt="Terminal Icon" />
+      <img src={kaliImage} alt="Terminal Icon" /> {/* Corrected src attribute */}
     </div>
   );
 };
 
-// Define propTypes outside of the component
+// Correctly defined propTypes outside of the component
 TerminalIcon.propTypes = {
   handleOpen: PropTypes.func.isRequired,
 };
 
-const HomePage = () => {
+function App() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   const openTerminal = () => setIsTerminalOpen(true);
@@ -55,8 +53,6 @@ const HomePage = () => {
       {/* Rest of the homepage content */}
     </div>
   );
-};
-return <HomePage/>;
 }
 
 export default App;
