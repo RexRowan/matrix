@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import kaliImage from '../assets/kali.png';
 
-const TerminalIcon = ({ handleOpen }) => {
+const KaliIcon = ({ handleOpen }) => {
   return (
-    <div className={styles.terminalIcon} onClick={handleOpen}>
-      <img src={kaliImage} alt="Terminal Icon" />
+    <div className={styles.kaliIcon} onClick={handleOpen}>
+      <img src={kaliImage} alt="Kali Icon" />
     </div>
   );
 };
 
-TerminalIcon.propTypes = {
+KaliIcon.propTypes = {
   handleOpen: PropTypes.func.isRequired,
 };
 
-export default TerminalIcon;
+export default KaliIcon;
