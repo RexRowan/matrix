@@ -1,0 +1,70 @@
+
+.homepage {
+    position: relative;
+  }
+.matrixBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* Styles for TerminalModal and TerminalIcon */
+  .modal { 
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .kaliTerminal {
+    width: 80%;
+    max-width: 600px;
+    background-color: #000000; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    color: #06eeff; 
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .terminalHeader {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .terminalHeader button {
+    background: none;
+    border: none;
+    color: #00e1ff; 
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .terminalBody {
+    white-space: pre;
+  }
+  
+  .terminalIcon {
+    opacity: 0.7;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .terminalIcon img {
+    width: 50px; 
+    height: auto;
+  }
+  
+ 
