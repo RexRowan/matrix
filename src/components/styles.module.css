@@ -80,3 +80,18 @@
     height: auto;
   }
   
+.terminalCursor {
+    background-color: #06eeff;
+    width: 1px;
+    height: 1.2rem;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #06eeff;
+    }
+    50% {
+        background-color: transparent;
+    }
+}
