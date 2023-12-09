@@ -13,6 +13,7 @@ const TerminalModal = ({ isOpen, handleClose }) => {
         </div>
         <div className={styles.terminalBody}>
           <p>root@rex:~#</p>
+          <div className={styles.terminalCursor}></div>
           {/* Terminal input logic here */}
         </div>
       </div>
